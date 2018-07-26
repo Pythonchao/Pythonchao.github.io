@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>sxchao-blog</title>
+  <title>局部变量和全局变量 | sxchao-blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="Python、爬虫、Web开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sxchao-blog">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="局部/全局变量概念12341）Python中，函数在调用的时候Python才会给函数一个内存地址，用来执行函数内部的相关代码。2)Python程序在运行时，首先会将程序最外部的变量载入内容，并给其分配相关的内存空间。我们成这种变量为全局变量。3）函数中声明的变量，只有在函数被执行时，才会被分配内存空间进行执行。我们成这种变量为局部变量。4）Python程序执行的过程中，执行函数时首先会检查其函数内">
+<meta name="keywords" content="Python、爬虫、Web开发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="局部变量和全局变量">
+<meta property="og:url" content="http://yoursite.com/2018/07/26/lesson12/index.html">
 <meta property="og:site_name" content="sxchao-blog">
+<meta property="og:description" content="局部/全局变量概念12341）Python中，函数在调用的时候Python才会给函数一个内存地址，用来执行函数内部的相关代码。2)Python程序在运行时，首先会将程序最外部的变量载入内容，并给其分配相关的内存空间。我们成这种变量为全局变量。3）函数中声明的变量，只有在函数被执行时，才会被分配内存空间进行执行。我们成这种变量为局部变量。4）Python程序执行的过程中，执行函数时首先会检查其函数内">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-26T12:14:54.035Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sxchao-blog">
+<meta name="twitter:title" content="局部变量和全局变量">
+<meta name="twitter:description" content="局部/全局变量概念12341）Python中，函数在调用的时候Python才会给函数一个内存地址，用来执行函数内部的相关代码。2)Python程序在运行时，首先会将程序最外部的变量载入内容，并给其分配相关的内存空间。我们成这种变量为全局变量。3）函数中声明的变量，只有在函数被执行时，才会被分配内存空间进行执行。我们成这种变量为局部变量。4）Python程序执行的过程中，执行函数时首先会检查其函数内">
   
     <link rel="alternative" href="/atom.xml" title="sxchao-blog" type="application/atom+xml">
   
@@ -161,41 +165,68 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-lesson3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-lesson12" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/12/lesson3/">Python数据类型</a>
+    <h1 class="article-title" itemprop="name">
+      局部变量和全局变量
     </h1>
   
 
         
-        <a href="/2018/07/12/lesson3/" class="archive-article-date">
-  	<time datetime="2018-07-12T13:29:52.670Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-12</time>
+        <a href="/2018/07/26/lesson12/" class="archive-article-date">
+  	<time datetime="2018-07-26T02:36:55.895Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="字符串类型"><a href="#字符串类型" class="headerlink" title="字符串类型"></a>字符串类型</h2><h3 id="input-函数"><a href="#input-函数" class="headerlink" title="input()函数"></a>input()函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">比较两个字符串（&gt;,&lt;,!=,&lt;=,&gt;=,==）</span><br><span class="line">a=input(<span class="string">'输入字符串：'</span>)</span><br><span class="line">b=input(<span class="string">'输入字符串：'</span>)</span><br><span class="line"><span class="built_in">print</span>(a&gt;b)</span><br><span class="line"><span class="built_in">print</span>(a&lt;b)</span><br><span class="line"><span class="built_in">print</span>(a!=b)</span><br><span class="line"><span class="built_in">print</span>(a&lt;=b)</span><br><span class="line"><span class="built_in">print</span>(a&gt;=b)</span><br><span class="line"><span class="built_in">print</span>(a==b)</span><br></pre></td></tr></table></figure>
-<h3 id="split-函数"><a href="#split-函数" class="headerlink" title="split()函数"></a>split()函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">str1=<span class="string">'apple,banana,apple,juzi'</span></span><br><span class="line"><span class="built_in">print</span>(str1.split(<span class="string">','</span>))</span><br><span class="line"><span class="built_in">print</span>(str1.split())<span class="comment">#将整个字符串作为列表的一个元素，输出</span></span><br><span class="line"></span><br><span class="line">str1=<span class="string">'apple banana apple juzi'</span></span><br><span class="line"><span class="built_in">print</span>(str1.split(<span class="string">' '</span>))</span><br><span class="line">结果为：[<span class="string">'apple'</span>,<span class="string">'banana'</span>,<span class="string">'apple'</span>,<span class="string">'juzi'</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#format的格式化输出</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">'欢迎，&#123;stu_name&#125;同学，参加&#123;major&#125;学习，我们将会开设&#123;number&#125;个班,供大家的学习。'</span>.format(stu_name=<span class="string">"jin"</span>,major=<span class="string">"Python"</span>,number=3))</span><br></pre></td></tr></table></figure>
-<h3 id="strip-函数"><a href="#strip-函数" class="headerlink" title="strip()函数"></a>strip()函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">strip() 字符串左右两端去除指定字符（默认情况，去除空格）</span><br><span class="line">函数格式：str.strip([指定字符])</span><br><span class="line">返回值：根据指定的字符，对字符串进行两端去除其内容，返回一个新的字符串。如果字符串中间有空格或指定字符，那么该函数不起作用。如果指定的字符在字符串左右两端不存在，那么将返回字符串本身。</span><br><span class="line">例如：</span><br><span class="line">缺省情况</span><br><span class="line">string1 = <span class="string">'  hello world  '</span></span><br><span class="line">&gt;&gt;&gt; string1.strip()</span><br><span class="line"><span class="string">'hello world'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(string1)</span><br><span class="line">  hello world  </span><br><span class="line"></span><br><span class="line">指定字符</span><br><span class="line">string1 = <span class="string">'awelcom to zhengzhoua'</span></span><br><span class="line">&gt;&gt;&gt; string1.strip(<span class="string">'a'</span>)</span><br><span class="line"><span class="string">'welcom to zhengzhou'</span></span><br><span class="line">注意：</span><br><span class="line">1）字符串类型，一旦被声明赋值后，其内容是不可被改变的，如果需要改变原字符串变量的值，必须对其进行重新赋值。</span><br><span class="line">2）如果指定字符内容为一个字符序列，那么意味着使用strip去除左右两端指定字符时，只要符合字符序列中的某一位，就进行去除</span><br><span class="line">string1 = <span class="string">' awelcom to zhengzhouab'</span></span><br><span class="line">&gt;&gt;&gt; string1.strip(<span class="string">' ab'</span>)</span><br><span class="line"><span class="string">'welcom to zhengzhou'</span></span><br></pre></td></tr></table></figure>
-<h3 id="find-和index-函数"><a href="#find-和index-函数" class="headerlink" title="find(和index()函数"></a>find(和index()函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">find() 查找</span><br><span class="line">函数格式：str.find(子字符串[,开始索引位，结束索引位])</span><br><span class="line">返回值：如果查找成功，则返回所查找内容在字符串中的索引位置，如果没有找到，返回-1.</span><br><span class="line">注意：如果所查找的内容中，有多个相同的字母，只会返回第一个字母所在的索引位。比如：</span><br><span class="line">str1 = <span class="string">'hello'</span></span><br><span class="line">str1.find(<span class="string">'ll'</span>) =&gt; 2  该例中，<span class="string">'ll'</span>在字符串中出现了两次，但只会返回第一次出现的索引位置。</span><br><span class="line">为什么查找时，没有找到目标字符串的情况下会返回-1。其实，在find操作中，会对字符串进行扫描从字符串的索引位0开始，一直到字符串结尾，如果在字符串最后一位没有找到匹配的内容，将指向字符串结束符(EOF)，该结束符为-1。所以找不到时，find返回值为-1.</span><br><span class="line">更多用法：</span><br><span class="line">string1 = <span class="string">'apple,banana,apple,apple'</span></span><br><span class="line">&gt;&gt;&gt; string1.find(<span class="string">'apple'</span>)</span><br><span class="line">0</span><br><span class="line">&gt;&gt;&gt; string1.find(<span class="string">'apple'</span>,5)</span><br><span class="line">13</span><br><span class="line">&gt;&gt;&gt; string1.find(<span class="string">'apple'</span>,7,20)</span><br><span class="line">13</span><br><span class="line">&gt;&gt;&gt; string1.find(<span class="string">'apple'</span>,14,20)</span><br><span class="line">-1</span><br><span class="line">&gt;&gt;&gt; string1.find(<span class="string">'apple'</span>,14,24)</span><br><span class="line">19</span><br><span class="line"></span><br><span class="line">index() 返回指定字符的索引位</span><br><span class="line">函数格式：index(子字符串[,开始索引位，结束索引位])</span><br><span class="line">返回值：如果找到指定的字符串，则返回其索引位；如果找不到就报错ValueError</span><br><span class="line"></span><br><span class="line">find()与index()函数的区别</span><br><span class="line">两者在执行结果时类似的，如果找到指定的字符就会返回其索引位</span><br><span class="line">find()如果找不到指定的字符时，返回-1；而index()找不到指定的字符，raise ValueError.</span><br><span class="line">从效率上来讲，index的查询速度要优于find,因为在python中对于像字符串这样的有序数据类型，会产生一个索引对象来自动维护其序列，find()函数不管是否有这样的序列，都需要在字符串本身进行逐一查找，而index()会通过这个索引对象的映射方式，来快速找到对应的索引位。</span><br></pre></td></tr></table></figure>
-<h3 id="replace-函数"><a href="#replace-函数" class="headerlink" title="replace()函数"></a>replace()函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">replace()替换函数</span><br><span class="line">函数格式：str.replace(old,new[,max])</span><br><span class="line">返回值：将指定字符串（old）替换为新字符串（new）,最大可以替换max次。替换完成后，返回一个新字符串。</span><br><span class="line">注意：此处的max参数，主要用来指定替换的次数，如果该参数缺省，表示替换里面所有符合条件的字符串。</span><br><span class="line">例如：</span><br><span class="line">string1 = <span class="string">'honor,oppo,vivo,apple,oppo,oppo'</span></span><br><span class="line">old_str = <span class="string">'oppo'</span></span><br><span class="line">new_str = <span class="string">'xiaomi'</span></span><br><span class="line"><span class="built_in">print</span>(string1.replace(old_str, new_str))     <span class="comment">#替换所有的oppo</span></span><br><span class="line">结果为：<span class="string">'honor,xiaomi,vivo,apple,xiaomi,xiaomi'</span></span><br><span class="line"><span class="built_in">print</span>(string1.replace(old_str, new_str,2))  <span class="comment">#替换指定次数，即两处oppo</span></span><br><span class="line">结果为：<span class="string">'honor,xiaomi,vivo,apple,xiaomi,oppo'</span></span><br></pre></td></tr></table></figure>
-<h3 id="isalnum-isalpha-isdigit"><a href="#isalnum-isalpha-isdigit" class="headerlink" title="isalnum() isalpha() isdigit()"></a>isalnum() isalpha() isdigit()</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">string1=<span class="string">'haha4545'</span></span><br><span class="line"><span class="built_in">print</span>(string1.isalnum()) <span class="comment">#判断字符串是否由数字或字母组成</span></span><br><span class="line"><span class="built_in">print</span>(string1.isalpha()) <span class="comment">#判断字符串是否由字母组成</span></span><br><span class="line"><span class="built_in">print</span>(string1.isdigit()) <span class="comment">#判断字符串是否由数字组成</span></span><br><span class="line">返回值：如果符合条件，返回True；如果不符合，返回False</span><br></pre></td></tr></table></figure>
-<h3 id="字符串运算符”-”"><a href="#字符串运算符”-”" class="headerlink" title="字符串运算符”[]”"></a>字符串运算符”[]”</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">使用方法：str[索引位] =&gt; 返回指定索引位的字符，</span><br><span class="line">索引位有两种表示方式：</span><br><span class="line">string1 = hello world</span><br><span class="line">第一种：string1[0] =&gt; h    到string1[10] =&gt; d</span><br><span class="line">第二种：string1[-1] =&gt; d   到string1[-11] =&gt; h</span><br><span class="line">切片操作:</span><br><span class="line">格式：str[start,end,step]</span><br><span class="line">start：代表切片开始的索引位</span><br><span class="line">end: 代表切片结束的索引位（但是不会输出该索引位指向的字符）</span><br><span class="line">step：代表每隔次几个字符个数截取一个</span><br><span class="line"></span><br><span class="line">string1 = hello world</span><br><span class="line">string1[0:3] =&gt; hel   从索引位为0的字符开始，到索引位3结束，但不包括索引位3所指向的字符。</span><br><span class="line">string1[2:4] =&gt; ll</span><br><span class="line">string1[0:-1] =&gt; hello worl </span><br><span class="line">string1[0:8:2] =&gt; hlow</span><br><span class="line"></span><br><span class="line">string1[:]  =&gt; <span class="string">'hello world'</span> 等于将字符串进行复制</span><br><span class="line">string1[:5] =&gt; <span class="string">'hello'</span>       如果没有标明开始索引位，默认从0开始</span><br><span class="line">string1[::] =&gt; <span class="string">'hello world'</span>  等同于string1[:]</span><br><span class="line"></span><br><span class="line">使用步长，实现字符串反转</span><br><span class="line">string1[-1::-1]  =&gt;dlrow olleh    从索引位-1开始，一直到字符串结束，反向输出字符</span><br><span class="line">但是下列操作，会返回一个空字符串：</span><br><span class="line">string1[-1:4]  =&gt; <span class="string">''</span></span><br><span class="line">string1[-1:-5] =&gt; <span class="string">''</span></span><br></pre></td></tr></table></figure>
-<h3 id="连接符与重复操作符"><a href="#连接符与重复操作符" class="headerlink" title="连接符与重复操作符"></a>连接符与重复操作符</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+：在字符串中使用时，作为连接两个字符串，并返回一个新字符串的作用来使用。</span><br><span class="line">*：重复操作指定的次数，即将字符串重复输出N次。返回一个新字符串。</span><br><span class="line">注意：在重复操作中，必须遵循：字符串*正整数这样的格式，如果数值不是正整数，其结果返回一个空字符串，如果不是数值类型，程序报错</span><br></pre></td></tr></table></figure>
-<h3 id="运算符”in”"><a href="#运算符”in”" class="headerlink" title="运算符”in”"></a>运算符”in”</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">用来检测指定的内容，是否在字符串中，如果存在则返回True，反之返回False</span><br><span class="line">例如:</span><br><span class="line">string1 = <span class="string">'hello world'</span></span><br><span class="line">&gt;&gt;&gt; substr = <span class="string">'e'</span></span><br><span class="line">&gt;&gt;&gt; substr <span class="keyword">in</span> string1</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; substr = <span class="string">'ll'</span></span><br><span class="line">&gt;&gt;&gt; substr <span class="keyword">in</span> string1</span><br><span class="line">True</span><br><span class="line">substr = <span class="string">'wr'</span></span><br><span class="line">&gt;&gt;&gt; substr <span class="keyword">in</span> string1</span><br><span class="line">False</span><br></pre></td></tr></table></figure>
-<h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">将‘John M.Cleese’转换为‘Cleese,John M’</span><br><span class="line">str_name=<span class="string">'John M.Cleese'</span><span class="comment">#切片</span></span><br><span class="line">a=str_name[0:6]</span><br><span class="line">b=str_name[7:]</span><br><span class="line"><span class="built_in">print</span>(b+<span class="string">','</span>+a)</span><br><span class="line"></span><br><span class="line">str_name=<span class="string">'John M.Cleese'</span><span class="comment">#拆分</span></span><br><span class="line">a=str_name.split(<span class="string">'.'</span>)</span><br><span class="line"><span class="built_in">print</span>(a[1]+<span class="string">','</span>+a[0])</span><br><span class="line"></span><br><span class="line">str_name=<span class="string">'John M. Cleese'</span></span><br><span class="line">a=str_name.split(<span class="string">' '</span>)</span><br><span class="line">b=a[1].strip(<span class="string">'.'</span>)</span><br><span class="line"><span class="built_in">print</span>(a[2]+<span class="string">','</span>+a[0]+<span class="string">' '</span>+b)</span><br></pre></td></tr></table></figure>
-<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">字符串（注意：当字符串长度达到一定的长度时，单引号和双引号的值的值是一样的 ）</span><br><span class="line">string1=<span class="string">'hello world'</span></span><br><span class="line">string2=<span class="string">"hello world"</span></span><br><span class="line"><span class="built_in">print</span>(id(string1))</span><br><span class="line"><span class="built_in">print</span>(id(string2))</span><br></pre></td></tr></table></figure>
+        <h2 id="局部-全局变量"><a href="#局部-全局变量" class="headerlink" title="局部/全局变量"></a>局部/全局变量</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1）Python中，函数在调用的时候Python才会给函数一个内存地址，用来执行函数内部的相关代码。</span><br><span class="line">2)Python程序在运行时，首先会将程序最外部的变量载入内容，并给其分配相关的内存空间。我们成这种变量为全局变量。</span><br><span class="line">3）函数中声明的变量，只有在函数被执行时，才会被分配内存空间进行执行。我们成这种变量为局部变量。</span><br><span class="line">4）Python程序执行的过程中，执行函数时首先会检查其函数内部的局部变量是否存在，如果存在就调用它，如果不存在就从外部全局变量中进行调用，如果仍然没有发现相关内容，则报错。</span><br></pre></td></tr></table></figure>
+<h3 id="globals-与locals"><a href="#globals-与locals" class="headerlink" title="globals()与locals()"></a>globals()与locals()</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在Python中，通过globals()观察全局作用域中内容，包括：内置函数、自定义函数、全局变量；通过locals()观察局部作用域中的内容，包括：局部变量，嵌套函数（内部函数）inner </span><br><span class="line">注：当函数中出现嵌套情况时，最内层函数执行调用变量，会采用“就近原则”即先查找自身范围内的变量，如果没有找到，则向上查找，直到程序最外部结束。</span><br></pre></td></tr></table></figure>
+<h3 id="global与nonlocal"><a href="#global与nonlocal" class="headerlink" title="global与nonlocal"></a>global与nonlocal</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">global用来修饰局部变量时，表示该变量将作为全局变量来使用。即不仅在函数中可以被调用，同时在文件最外部也可以被调用。</span><br><span class="line">nonlocal用来修饰嵌套函数内部的变量，对父级作用域（外层函数）中的变量进行引用和修改，那么从该层(包括父级)以下都将调用该变量的值。注意，该关键字只能影响其直接父级函数。</span><br><span class="line">使用global关键字修饰的变量之前可以并不存在</span><br><span class="line">而使用nonlocal关键字修饰的变量在嵌套作用域中必须已经存在。</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">总结：在函数中定义的变量，我们成为局部变量。包括在函数内部定义的变量、作为参数传递进来的变量。局部变量起作用的范围，我们称为局部作用域。因为Python在调用局部变量时，需要给它分配内存地址，我们称为这个地址为局部命名空间。</span><br><span class="line">在文件最外层定义的变量，我们成为全局变量，可以在文件中的任意位置进行调用。全局变量起作用的范围，我们称为全局作用域。Python在载入文件时，就需要给全局变量分配内存地址，这个地址我们称为全局命名空间。</span><br></pre></td></tr></table></figure>
+<h3 id="Python运行时处理变量的步骤"><a href="#Python运行时处理变量的步骤" class="headerlink" title="Python运行时处理变量的步骤"></a>Python运行时处理变量的步骤</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1、从Python解释器开始执行之后，就在内存中开辟里一个空间，每当遇到一个变量的时候，就把变量名和值之间对应的关系记录下来，但是当遇到函数定义的时候，解释器只是象征性的将函数名读入内存，表示知道这个函数存在了，至于函数内部的变量和逻辑，解释器根本不关心。</span><br><span class="line">2、函数执行时，函数中的变量会储存在新开辟出来的内存中，函数中的变量只能在函数内部使用，并且会随着函数执行完毕，这块内存中的所有内容也会被清空</span><br></pre></td></tr></table></figure>
+<h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def f1():</span><br><span class="line">    def f2():</span><br><span class="line">        def f3():</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">'in f3'</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'in f2'</span>)</span><br><span class="line">        f3()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'in f1'</span>)</span><br><span class="line">    f2()</span><br><span class="line">f1()</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a=10</span><br><span class="line">b=20</span><br><span class="line">def f2():</span><br><span class="line">    c=30</span><br><span class="line">    d=40</span><br><span class="line">    <span class="built_in">print</span>(globals())</span><br><span class="line">    <span class="built_in">print</span>(locals())</span><br><span class="line">f2()</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def show():</span><br><span class="line">    global name</span><br><span class="line">    name=<span class="string">'hello'</span></span><br><span class="line">    <span class="built_in">print</span>(name)</span><br><span class="line">show()</span><br><span class="line"><span class="built_in">print</span>(name)</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def ff():</span><br><span class="line">    b=6</span><br><span class="line">    def f2():</span><br><span class="line">        nonlocal b      <span class="comment">#nonlocal只能用在嵌套里，不能直接用在函数里</span></span><br><span class="line">        b=666</span><br><span class="line">        <span class="built_in">print</span>(b)</span><br><span class="line">    f2()</span><br><span class="line">ff()</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">def add_b():</span><br><span class="line">    b = 42</span><br><span class="line">    def do_global():</span><br><span class="line">        b = 10</span><br><span class="line">        <span class="built_in">print</span>(b)</span><br><span class="line">        def dd_nonlocal():</span><br><span class="line">            nonlocal b</span><br><span class="line">            b = b + 20</span><br><span class="line">            <span class="built_in">print</span>(b)</span><br><span class="line">        dd_nonlocal()</span><br><span class="line">        <span class="built_in">print</span>(b)</span><br><span class="line">    do_global()</span><br><span class="line">    <span class="built_in">print</span>(b)</span><br><span class="line">add_b()</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def fun():</span><br><span class="line">    a=1</span><br><span class="line">    def fun1():</span><br><span class="line">        a=3</span><br><span class="line">        <span class="built_in">print</span>(a)</span><br><span class="line">    fun1()</span><br><span class="line">    <span class="built_in">print</span>(a)</span><br><span class="line">    </span><br><span class="line">fun()</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">def f1():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'我是f1函数'</span>)</span><br><span class="line">def f2():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'我是f2函数'</span>)</span><br><span class="line">def f3():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'我是f3函数'</span>)</span><br><span class="line">a=f1     <span class="comment">#把f1函数名对应的地址进行赋值,给了a</span></span><br><span class="line">b=f2</span><br><span class="line">c=f3</span><br><span class="line">li=[a,b,c]</span><br><span class="line"><span class="built_in">print</span>(li[2])</span><br><span class="line">li[2]()</span><br><span class="line"><span class="comment">#作为参数和返回值</span></span><br><span class="line">def ff1():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'哈哈哈哈'</span>)</span><br><span class="line">def ff2(x):</span><br><span class="line">    x()</span><br><span class="line">ff2(ff1)</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#######例子</span></span><br><span class="line">错误实例</span><br><span class="line">a=10</span><br><span class="line">def ff3():</span><br><span class="line">    <span class="built_in">print</span>(a)   <span class="comment">#如果在局部中引用了全局变量，则不能再在局部中声明相同的变量</span></span><br><span class="line">    a=5</span><br><span class="line">    a+=1</span><br><span class="line">ff3()</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#普通嵌套</span></span><br><span class="line">def f1():</span><br><span class="line">    a=5</span><br><span class="line">    def f2():</span><br><span class="line">        <span class="built_in">print</span>(a)</span><br><span class="line">    f2()</span><br><span class="line">f=f1</span><br><span class="line">f()</span><br></pre></td></tr></table></figure>
+<h2 id="闭包-amp-装饰器"><a href="#闭包-amp-装饰器" class="headerlink" title="闭包&amp;装饰器"></a>闭包&amp;装饰器</h2><h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">闭包格式</span><br><span class="line">def outer():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'我是外部函数'</span>)</span><br><span class="line">    def inner():</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'我是闭包函数'</span>)</span><br><span class="line">    <span class="built_in">return</span> inner</span><br><span class="line">f = outer()</span><br><span class="line">f()</span><br><span class="line">通过对例子的观察，我们发现闭包函数的写法有如下特点：</span><br><span class="line">1、闭包函数作为内部函数，嵌套在外部函数中</span><br><span class="line">2、闭包函数会作为外部函数的返回值，进行返回。返回闭包函数时，只返回函数名，不带括号。</span><br><span class="line">3、外部调用时，首先要执行外部函数，然后将结果赋值给一个变量，此时该变量对应了闭包函数。</span><br><span class="line">4、我们可以通过__closure__内部函数可以观察到，闭包函数的存在。前提是，闭包函数要与外部函数进行数据传递或调用。</span><br><span class="line">总结：闭包使用的数据，必须是本身定义或外部函数中定义的相关变量，通常需要调用外部函数的数据，形成一个封闭的函数结构。不能与外部数据（全局变量）发生交流。</span><br></pre></td></tr></table></figure>
+<h3 id="闭包的应用—装饰器"><a href="#闭包的应用—装饰器" class="headerlink" title="闭包的应用—装饰器"></a>闭包的应用—装饰器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">1、概念：装饰器本身仍然是一个函数。是我们队闭包应用的一种具体实现。</span><br><span class="line">2、作用：装饰器可以在不改变函数本身功能的情况下，为函数添加额外的功能。诸如：日志、测试、性能检测等。装饰器同样也是返回一个函数对象。</span><br><span class="line">3、用法：</span><br><span class="line">使用格式：@+装饰器名称</span><br><span class="line"></span><br><span class="line">import time</span><br><span class="line"></span><br><span class="line">def outer(f):</span><br><span class="line">    def inner(*var):</span><br><span class="line">        start_time = time.time()</span><br><span class="line">        f(*var)</span><br><span class="line">        time.sleep(0.3)</span><br><span class="line">        end_time = time.time()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'此函数执行时间为&#123;0&#125;'</span>.format(str(end_time-start_time)))</span><br><span class="line">    <span class="built_in">return</span> inner</span><br><span class="line"></span><br><span class="line">@outer      <span class="comment"># 此处就是装饰器的声明，这种方法我们成为语法糖</span></span><br><span class="line">def func1():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'hello world'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="练习-1"><a href="#练习-1" class="headerlink" title="练习"></a>练习</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def fun():</span><br><span class="line">    name=<span class="string">'eva'</span></span><br><span class="line">    def inner():</span><br><span class="line">        <span class="built_in">print</span>(name)</span><br><span class="line">    <span class="built_in">return</span> inner</span><br><span class="line">f=fun()</span><br><span class="line">f()</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line">def ff():</span><br><span class="line">    a=5</span><br><span class="line">    def f2():</span><br><span class="line">        <span class="built_in">print</span>(a)</span><br><span class="line">    <span class="built_in">print</span>(f2.__closure__)</span><br><span class="line">    <span class="built_in">return</span> f2</span><br><span class="line">f=ff()  <span class="comment">#########此时f相当于f2</span></span><br><span class="line">f()     <span class="comment">#########相当于调用f2</span></span><br><span class="line"></span><br><span class="line">name=<span class="string">'aa'</span></span><br><span class="line">def fun():</span><br><span class="line">    def fun1():</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">print</span>(name)</span><br><span class="line">    <span class="built_in">print</span>(fun1.__closure__)</span><br><span class="line">    <span class="built_in">return</span> fun1</span><br><span class="line">f2=fun()</span><br><span class="line">f2()</span><br><span class="line"></span><br><span class="line">def outer(x):</span><br><span class="line">    def inner(y):</span><br><span class="line">        nonlocal x</span><br><span class="line">        x+=y</span><br><span class="line">        <span class="built_in">return</span> x</span><br><span class="line">    <span class="built_in">return</span> inner</span><br><span class="line"></span><br><span class="line">a = outer(10)</span><br><span class="line"><span class="built_in">print</span>(a(1))</span><br><span class="line"><span class="built_in">print</span>(a(3))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">import time</span><br><span class="line">def outer(f):</span><br><span class="line">    def inner(*var):</span><br><span class="line">        start_time=time.time()</span><br><span class="line">        f(*var)</span><br><span class="line">        time.sleep(0.3)</span><br><span class="line">        end_time=time.time()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'执行时间&#123;0&#125;'</span>.format(end_time-start_time))</span><br><span class="line">    <span class="built_in">return</span> inner</span><br><span class="line">@outer</span><br><span class="line">def fun1():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'hello world'</span>)</span><br><span class="line">@outer</span><br><span class="line">def fun2():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'welcome'</span>)</span><br><span class="line">@outer</span><br><span class="line">def fun3(a):</span><br><span class="line">    <span class="built_in">print</span>(a)</span><br><span class="line">@outer</span><br><span class="line">def fun4(a,b):</span><br><span class="line">    <span class="built_in">print</span>(a,b)</span><br><span class="line">fun1()</span><br><span class="line">fun2()</span><br><span class="line">fun3(<span class="string">'aaa'</span>)</span><br><span class="line">fun4(<span class="string">'hello'</span>,<span class="string">'world'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">import time</span><br><span class="line">def fun1():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'hello world'</span>)</span><br><span class="line"></span><br><span class="line">def fun3():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'welcome beijing'</span>)</span><br><span class="line">def fun4():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'welcome zhengzhou'</span>)</span><br><span class="line">def fun2():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'welcome'</span>)</span><br><span class="line"></span><br><span class="line">def outer(f):</span><br><span class="line">    def inner():</span><br><span class="line">        start_time=time.time()</span><br><span class="line">        f()</span><br><span class="line">        time.sleep(0.3)</span><br><span class="line">        end_time=time.time()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'执行时间&#123;0&#125;'</span>.format(end_time-start_time))</span><br><span class="line">    <span class="built_in">return</span> inner</span><br><span class="line">fun1=outer(fun1)</span><br><span class="line">fun1()</span><br><span class="line"></span><br><span class="line">fun3=outer(fun3)</span><br><span class="line">fun3()</span><br><span class="line">fun4=outer(fun4)</span><br><span class="line">fun4()</span><br><span class="line">fun2=outer(fun2)</span><br><span class="line">fun2()</span><br></pre></td></tr></table></figure>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -204,16 +235,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/12/lesson3/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/26/lesson12/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/07/26/lesson13/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          高阶函数
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/23/lesson11/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">函数</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -233,228 +332,14 @@
 
 
 
-
-  
-    <article id="post-lesson2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/12/lesson2/">Python基础</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/12/lesson2/" class="archive-article-date">
-  	<time datetime="2018-07-12T05:59:19.666Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="声明和赋值"><a href="#声明和赋值" class="headerlink" title="声明和赋值"></a>声明和赋值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">变量的声明：在Python没有变量类型，直接进行变量的声明，比如：i = 10</span><br><span class="line">变量的赋值：在python中，有两种赋值方式</span><br><span class="line">第一种，单个变量赋值  name = <span class="string">'tom'</span></span><br><span class="line">第二种，多个变量同时赋值  name, age, sex = <span class="string">'tom'</span>， 23， <span class="string">'男'</span></span><br></pre></td></tr></table></figure>
-<h3 id="变量在内存中的存在情况"><a href="#变量在内存中的存在情况" class="headerlink" title="变量在内存中的存在情况"></a>变量在内存中的存在情况</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">python中的变量，在声明和赋值时，不仅声明了变量的名字同时还为这个变量指向了内存中的地址，该地址用来存储变量的值。</span><br><span class="line">python中整数、字符串、浮点数等其本身都属于常量，所以当赋值给一个变量时，如：</span><br><span class="line">i = 10意味着将10这个常量在内存中的地址指向，因此，i = 10 ，j = 10 使用id(i),id(j）我们发现他们的id是相同的。</span><br><span class="line">因为，他们的值10在内存中的地址时相同的。</span><br></pre></td></tr></table></figure>
-<h3 id="变量与内存地址"><a href="#变量与内存地址" class="headerlink" title="变量与内存地址"></a>变量与内存地址</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">当我们声明一个变量时，对其进行赋值。实际上就是将变量值所在的内存地址，赋值给该变量。也就是说这个变量指向其值所在的内存地址。</span><br><span class="line">当我们改变变量的值的时候，说白了就是将变量指向的内存地址进行变化。</span><br><span class="line">举例：我们日常购买商品，快递员通过你的邮寄地址将快递送到你本人手里。可以理解为，快递员拥有指向你这个变量的地址，通过地址，将快递商品赋值给你。</span><br></pre></td></tr></table></figure>
-<h3 id="变量与常量"><a href="#变量与常量" class="headerlink" title="变量与常量"></a>变量与常量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">变量：我们认为其内容是临时结果，可变的。供后续的程序代码进行调用。</span><br><span class="line">常量：我们认为其内容是不变的，或者在程序运行的过程中也不发生改变。</span><br><span class="line">在Python中，我们通过大写变量名，来表明这是一个常量，比如：CARDID = <span class="string">'12048377293'</span></span><br></pre></td></tr></table></figure>
-<h3 id="变量命名规则"><a href="#变量命名规则" class="headerlink" title="变量命名规则"></a>变量命名规则</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">首先，Python中的变量命名，必须由字母、数字或下划线三者组成，不能有其他的字符出现</span><br><span class="line">其次，变量名的首个字符，必须是字母或下划线</span><br><span class="line">然后，Python中的关键字不能作为变量名来使用，常用的关键字诸如：<span class="keyword">if</span>,<span class="keyword">for</span>,is,none等等。</span><br><span class="line">Python是严格区分大小写的语言，其中A = 10 ，a = 10。我们认为这是两个不同的变量</span><br></pre></td></tr></table></figure>
-<p>##数据类型</p>
-<h3 id="常见的数据类型"><a href="#常见的数据类型" class="headerlink" title="常见的数据类型"></a>常见的数据类型</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">常见的数据类型：</span><br><span class="line">整型</span><br><span class="line">浮点型</span><br><span class="line">布尔型</span><br><span class="line">复数型</span><br><span class="line">字符串型</span><br><span class="line">我们工作中常用到整型、字符串</span><br></pre></td></tr></table></figure>
-<p>###整型–进制间转换</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">整型：我们通常根据计算机中数据编码格式，将整型分为：二进制、八进制、十进制、十六进制四种类型。</span><br><span class="line">进制间的转换        <span class="comment">#二进制数以0b引导，八进制数以0o引导，十六进制数以0x引导 </span></span><br><span class="line">二进制转十进制：bin(int)=&gt;将十进制转为二进制   int(bin)=&gt;将二进制转为十进制</span><br><span class="line">八进制转十进制：oct(int)=&gt;将十进制转为八进制   int(oct)=&gt;将八进制转为十进制</span><br><span class="line">十六进制转十进制： hex(int)=&gt;将十进制转为十六进制，int(hex)=&gt;将十六进制转为十进制</span><br><span class="line">例子：</span><br><span class="line">i=10</span><br><span class="line"><span class="built_in">print</span>(bin(i))<span class="comment">#十进制转为二进制</span></span><br><span class="line"><span class="built_in">print</span>(oct(i))<span class="comment">#十进制转八进制</span></span><br><span class="line"><span class="built_in">print</span>(hex(i))<span class="comment">#十进制转十六进制</span></span><br><span class="line"><span class="built_in">print</span>(int(0b1010))<span class="comment">#二进制转十进制</span></span><br><span class="line"><span class="built_in">print</span>(int(0o12))<span class="comment">#八进制转十进制</span></span><br><span class="line"><span class="built_in">print</span>(int(0xa))<span class="comment">#十六进制转十进制</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">'八进制：%o,十六进制：%x'</span>%(10,10))<span class="comment">#进制转换</span></span><br></pre></td></tr></table></figure>
-<p>###布尔型</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">python中布尔型分为True和False两种，但是在实际操作中我们也可以将其与1和0等同。</span><br><span class="line">布尔型常用在逻辑运算和判断条件中，作为结果来使用。但是也可以参与算术运算，当进行算术运算时，True作为1、False作为0参与运算。</span><br><span class="line">例子：</span><br><span class="line">a = True     a + 1 =&gt; 2</span><br><span class="line">b = False    b + 1 =&gt; 1</span><br><span class="line">a + b =&gt; 1</span><br><span class="line">注意：通常我们在python，不能将布尔型参与算术运算的。布尔型一般参加比较运算或逻辑运算，其返回值还是布尔型。</span><br><span class="line">布尔型求非： not</span><br><span class="line">not a =&gt; False</span><br><span class="line">not b =&gt; True</span><br></pre></td></tr></table></figure>
-<p>###运算符</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">算术运算符：+、-、*、/</span><br><span class="line">在python中默认的数据类型时浮点型，因此在执行算术运算时5/2=2.5，而不是2.</span><br><span class="line">%：两数进行求余运算，如果分子大于分母，得余数；如果分子小于分母，直接得分子。注意：只有分子除尽分母时，结果才返回0</span><br><span class="line">//：两数相除取整数，注意，此处得到的整数，为结果的整数部分不进行四舍五入操作。</span><br><span class="line">**：A**B 数A连续相乘B次，也可以说数A 的B次幂</span><br><span class="line">i = 10 </span><br><span class="line">i = i + 5  等同于  i+=5</span><br><span class="line">i = i - 5  等同于  i-=5</span><br><span class="line">i = i * 5  等同于  i*=5</span><br><span class="line">i = i / 5  等同于  i/=5</span><br><span class="line">i = i//5   等同于  i//=5</span><br><span class="line">i = i ** 2 等同于  i**=2</span><br><span class="line">i = i % 3  等同于  i%=3</span><br></pre></td></tr></table></figure>
-<p>###补充函数</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(int(1.9))   <span class="comment">#int（）函数取整  结果为1  </span></span><br><span class="line"></span><br><span class="line"><span class="comment">#幂次运算函数pow()</span></span><br><span class="line"><span class="built_in">print</span>(pow(2,3))<span class="comment">#等同于2**3</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#求两数相处的商和余divmod()函数</span></span><br><span class="line"><span class="built_in">print</span>(divmod(5,3))<span class="comment">#结果（1,2）</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#求绝对值abs()函数</span></span><br><span class="line"><span class="built_in">print</span>(abs(-10))</span><br><span class="line"></span><br><span class="line">import math<span class="comment">#引入一个.math包</span></span><br><span class="line"><span class="built_in">print</span>(math.floor(5/3))<span class="comment">#向下取整（只舍不入:相当于'//'）</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(math.ceil(5/3))<span class="comment">#向上取整（只入不舍  ：只要有小数部分，无论是否大于5还是小于5，均进位）</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#round()函数实行四舍五入的操作</span></span><br><span class="line"><span class="built_in">print</span>(round(1.5))</span><br><span class="line"><span class="built_in">print</span>(round(1.4))</span><br><span class="line"><span class="built_in">print</span>(round(1.2654,2))<span class="comment">#括号内的'2'表示保留的小数位数</span></span><br><span class="line"></span><br><span class="line">精确的十进制数：在python中，我们通过阅读官方文档了解到，浮点数是一种近似值的表示，因此直接使用浮点数时常常出现精度丢失或不匹配情况发生。</span><br><span class="line">decimal：<span class="comment">#求取精确的十进制  浮点数运算</span></span><br><span class="line">from decimal import Decimal   <span class="comment">#引入decimal中的Decimal对象</span></span><br><span class="line">f1=12.36</span><br><span class="line">f2=4.56</span><br><span class="line">a=Decimal(f1).quantize(Decimal(<span class="string">'0.00'</span>))   <span class="comment"># Decimal(f1):将浮点数转换为decimal对象,同时指定该数值的精度，保留小数点后几位</span></span><br><span class="line">b=Decimal(f2).quantize(Decimal(<span class="string">'0.00'</span>))</span><br><span class="line"><span class="built_in">print</span>((a+b).quantize(Decimal(<span class="string">'0.00'</span>)))</span><br><span class="line"><span class="built_in">print</span>((a*b).quantize(Decimal(<span class="string">'0.00'</span>)))</span><br></pre></td></tr></table></figure>
-<h3 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">1、下列Python赋值语句中，不合法的是_C__</span><br><span class="line">A x,y=y,x</span><br><span class="line">B x=y=1</span><br><span class="line">C x=(y=1)</span><br><span class="line">D x=1;y=1</span><br><span class="line"></span><br><span class="line">哪个是Python程序中与“缩进”有关的正确说法？ _D__</span><br><span class="line">A 缩进统一为4个空格</span><br><span class="line">B 缩进是非强制的，仅为了提高代码可读性</span><br><span class="line">C 缩进可以用在任何语句之后，表示语句间的包含关系</span><br><span class="line">D 缩进在程序中长度统一且强制使用</span><br><span class="line"></span><br><span class="line">下面哪个不是Python语言的合法命名？ _D__</span><br><span class="line">A MyGod5</span><br><span class="line">B _MyGod_</span><br><span class="line">C MyGod</span><br><span class="line">D 5MyGod</span><br><span class="line"></span><br><span class="line">给标识符关联名字的过程叫什么？_D__</span><br><span class="line">A 生成语句</span><br><span class="line">B 表达</span><br><span class="line">C 赋值语句</span><br><span class="line">D 命名</span><br><span class="line"></span><br><span class="line">两个变量值的关系？请描述</span><br><span class="line">　　n1 = 123456　　n2 = n1</span><br><span class="line">n1与n2两变量的值是相等的，先对n1进行赋值，然后又将n1的值赋值给了n2,即两变量值相等。</span><br><span class="line"></span><br><span class="line">请描述变量命名规范 </span><br><span class="line">变量命名，其名字只能包含字母、数字、下划线，不能包含其他的字符，首字母为字母或者下划线，不能用数字作为首字母；一般命名不建议名字的前后均使用下划线，例如：_name_，因为python中的方法就是这样命名的。</span><br><span class="line"></span><br><span class="line">请对学生的相关信息:姓名、年龄、性别、专业、院校、联系方式、籍贯等内容，进行标识符的声明和赋值。</span><br><span class="line">stu_name=<span class="string">'jin'</span>    						<span class="comment">#姓名</span></span><br><span class="line">stu_age=22								<span class="comment">#年龄</span></span><br><span class="line">stu_sex=‘男’							<span class="comment">#性别</span></span><br><span class="line">stu_major=<span class="string">'软件开发'</span>					 <span class="comment">#专业</span></span><br><span class="line">stu_academy=<span class="string">'黄科大'</span> 					 <span class="comment">#院校</span></span><br><span class="line">stu_tel=<span class="string">'15236987412'</span>					<span class="comment">#联系方式</span></span><br><span class="line">stu_address=<span class="string">'河南周口'</span>					 <span class="comment">#籍贯</span></span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/12/lesson2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-lesson1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/12/lesson1/">Python入门</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/12/lesson1/" class="archive-article-date">
-  	<time datetime="2018-07-12T05:08:26.822Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h2><h3 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">在开发过程，对应不同的语言使用不同的字符编码。</span><br><span class="line">英文    ISO-8859-1</span><br><span class="line">中文    gbk或gb2312</span><br><span class="line">目前Python为了统一编码格式，在3.0以上的版本使用了utf-8编码</span><br></pre></td></tr></table></figure>
-<h3 id="print-函数"><a href="#print-函数" class="headerlink" title="print()函数"></a>print()函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">语法格式：<span class="built_in">print</span>(value,...,sep=<span class="string">' '</span>,end=<span class="string">'\n'</span>)</span><br><span class="line">其中，value代表我们要输出的内容，可以是字符串，可以是数值等内容</span><br><span class="line">sep代表输出多个值之间的间隔符，默认使用空格隔开。我们可以重新定义间隔符，比如采用：<span class="comment">#、，等</span></span><br><span class="line">end代表输出语句的结束标识，默认使用了换行，我们可以重新定义其他内容，其输出的内容将不再进行换行操作。</span><br></pre></td></tr></table></figure>
-<h3 id="print-函数的基本使用"><a href="#print-函数的基本使用" class="headerlink" title="print()函数的基本使用"></a>print()函数的基本使用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>()常用输出方式：</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'hello '</span>)、<span class="built_in">print</span>(123456)等</span><br><span class="line">参数格式输出</span><br><span class="line">%s：代表了字符串内容，其中</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'welcome %s'</span>%Beijing)=&gt;welcome Beijing</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'welcome %10.3s'</span>%Beijing)=&gt;welcome       Bei,输出结果为10个字符其中包含字符串Beijing中前三个，其余用空格填充</span><br><span class="line">%d：代表了整数内容，其中</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'price %d'</span>%10)=&gt;price 10</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'price %d'</span>%10.5) =&gt; price 10</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'price %3d'</span>%10000)=&gt; price 10000</span><br><span class="line">注意这里面的3d表示输出一个宽度为3个单元的数值，如果数值长度小于三，那么数值靠右对齐。</span><br><span class="line">-3d表示，数值反向对齐（靠左对齐）</span><br><span class="line">%f：代表了浮点数内容(注意，在Python中浮点数是一个近似值，所以结果也是近似)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'price %f'</span>%10.2)=&gt;10.200000</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'price %.1f'</span>%10.2) =&gt; 10.2</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'prince %.1f'</span>%10.58) = &gt;10.6 当取一位小数位的时候，将小数位第二位进行舍入操作，但是Python的中间值不是5，导致当小数位第二位是5时，直接被舍去</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'%5.1f'</span>%10.3) =&gt; 10.3</span><br><span class="line">输出一个宽度为5的单位，其中整数3位，小数部分1位，小数点占一位</span><br></pre></td></tr></table></figure>
-<h3 id="格式化输出"><a href="#格式化输出" class="headerlink" title="格式化输出"></a>格式化输出</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在Python3.0之后，推荐使用&#123;0&#125;来代替前期的%d,%s,%f等一系列的格式化参数，采用了字符串的format函数进行处理。写法如下：</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'welcome &#123;0&#125;同学，加入&#123;1&#125;班级'</span>.format(<span class="string">'tom'</span>,<span class="string">'Python3班'</span>))</span><br><span class="line">其中&#123;0&#125;，&#123;1&#125;分别映射format()中的<span class="string">'tom'</span>和<span class="string">'Python3班'</span>，如果前面占位符中的索引值变化，那么他们映射的值也随之变化</span><br></pre></td></tr></table></figure>
-<h3 id="注释（声明属性）"><a href="#注释（声明属性）" class="headerlink" title="注释（声明属性）"></a>注释（声明属性）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">目的：药品属性</span></span><br><span class="line"><span class="string">作者：jin</span></span><br><span class="line"><span class="string">日期：2018/7/6</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br><span class="line"></span><br><span class="line">medical_name=<span class="string">'炎可宁'</span> <span class="comment">#药品名</span></span><br><span class="line">medical_ingredient=<span class="string">'金银花，野菊花，三叉苦，岗梅，马来酸氯苯那敏'</span> <span class="comment">#成分</span></span><br><span class="line">medical_produceDate=<span class="string">'2018/1/1'</span> <span class="comment">#生产日期</span></span><br><span class="line">medical_expiration=<span class="string">'12个月'</span> <span class="comment">#保质期</span></span><br><span class="line">medical_producePlace=<span class="string">'北京'</span> <span class="comment">#生产地</span></span><br><span class="line">medical_Producer=<span class="string">'北京人民药厂'</span><span class="comment">#生产厂家</span></span><br><span class="line">medical_character=<span class="string">'棕黄色，微苦'</span> <span class="comment">#性状</span></span><br><span class="line">medical_userway=<span class="string">'开水冲服'</span> <span class="comment">#用法</span></span><br><span class="line">medical_user=<span class="string">'孕妇、幼儿不可使用'</span> <span class="comment">#使用人群</span></span><br><span class="line">medical_dosage=<span class="string">'一日三次，一次2~3片'</span> <span class="comment">#用量</span></span><br><span class="line">medical_effect=<span class="string">'头疼、脑热、微恶风寒引起的炎症、咽喉红肿疼痛、咳嗽等'</span> <span class="comment">#不良反应</span></span><br></pre></td></tr></table></figure>
-<h3 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">如何打印i<span class="string">'m "ok"</span></span><br><span class="line"><span class="string">    print("i'</span>m<span class="string">"'"</span>ok<span class="string">"')</span></span><br><span class="line"><span class="string">    print('i\'m"</span>ok<span class="string">"')</span></span><br><span class="line"><span class="string">    print('''i'm"</span>ok<span class="string">"''')</span></span><br><span class="line"><span class="string">print(r'\\')和print('\\')结果是分别什么？语句中的‘r’是什么作用？</span></span><br><span class="line"><span class="string">    print(r'\\') 结果输出"</span>\\<span class="string">"</span></span><br><span class="line"><span class="string">    print('\\') 结果输出'\'</span></span><br><span class="line"><span class="string">如何不使用 打印多行？</span></span><br><span class="line"><span class="string">    使用end即可:</span></span><br><span class="line"><span class="string">    例如:</span></span><br><span class="line"><span class="string">    print('hello world',end=':')</span></span><br><span class="line"><span class="string">    print('welcome',end=',')</span></span><br><span class="line"><span class="string">    print('ya')</span></span><br><span class="line"><span class="string">下面三个式子的值是多少print(10//3) print(10/3) print(10%3)</span></span><br><span class="line"><span class="string">    print(10//3)   结果为3</span></span><br><span class="line"><span class="string">    print(10/3)    结果为3.3333333333333335</span></span><br><span class="line"><span class="string">    print(10%3)    结果为1</span></span><br><span class="line"><span class="string">如何得到字符的Ascii码，如何得到Ascii码代表的字符？</span></span><br><span class="line"><span class="string">    使用ord()、chr()函数进行转换得到。</span></span><br><span class="line"><span class="string">    string = 'a'</span></span><br><span class="line"><span class="string">    print(ord(string))    #将字符转为值</span></span><br><span class="line"><span class="string">    print(chr(97))        #将值转换成对应的字符</span></span><br><span class="line"><span class="string">这个语句print('%-2d-%.2f' %(3,1.156)) 的输出是什么样的</span></span><br><span class="line"><span class="string">    输出：3 -1.16</span></span><br><span class="line"><span class="string">如何使用.format 方式打印</span></span><br><span class="line"><span class="string">    print('&#123;0&#125;'.format(string))</span></span><br><span class="line"><span class="string">    print('&#123;0&#125;和&#123;1&#125;'.format('北京','上海'))</span></span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/12/lesson1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/12/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/12/hello-world/" class="archive-article-date">
-  	<time datetime="2018-07-12T01:04:26.868Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/12/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -481,8 +366,8 @@ span id="busuanzi_container_page_pv">
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
