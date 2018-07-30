@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | sxchao-blog</title>
+  <title>二进制的输入输出 | sxchao-blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="Python、爬虫、Web开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sxchao-blog">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="struct和picklestruct1234567891011121314151617181920212223242526272829import struct&apos;&apos;&apos;写入a=12.23b=Truec=8sn=struct.pack(&apos;if?&apos;,c,a,b)  ########注意：&apos;if?&apos;：这是对应的格式，&apos;i&apos;代表int型，&apos;f&apos;代表浮点型，&apos;?&apos;代表布尔型,顺序是可以调换的f=open(&apos;">
+<meta name="keywords" content="Python、爬虫、Web开发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二进制的输入输出">
+<meta property="og:url" content="http://yoursite.com/2018/07/30/lesson15/index.html">
 <meta property="og:site_name" content="sxchao-blog">
+<meta property="og:description" content="struct和picklestruct1234567891011121314151617181920212223242526272829import struct&apos;&apos;&apos;写入a=12.23b=Truec=8sn=struct.pack(&apos;if?&apos;,c,a,b)  ########注意：&apos;if?&apos;：这是对应的格式，&apos;i&apos;代表int型，&apos;f&apos;代表浮点型，&apos;?&apos;代表布尔型,顺序是可以调换的f=open(&apos;">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-30T14:05:14.758Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sxchao-blog">
+<meta name="twitter:title" content="二进制的输入输出">
+<meta name="twitter:description" content="struct和picklestruct1234567891011121314151617181920212223242526272829import struct&apos;&apos;&apos;写入a=12.23b=Truec=8sn=struct.pack(&apos;if?&apos;,c,a,b)  ########注意：&apos;if?&apos;：这是对应的格式，&apos;i&apos;代表int型，&apos;f&apos;代表浮点型，&apos;?&apos;代表布尔型,顺序是可以调换的f=open(&apos;">
   
     <link rel="alternative" href="/atom.xml" title="sxchao-blog" type="application/atom+xml">
   
@@ -161,214 +165,156 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-lesson15" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      二进制的输入输出
+    </h1>
+  
+
+        
+        <a href="/2018/07/30/lesson15/" class="archive-article-date">
+  	<time datetime="2018-07-30T13:50:52.011Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="struct和pickle"><a href="#struct和pickle" class="headerlink" title="struct和pickle"></a>struct和pickle</h2><h3 id="struct"><a href="#struct" class="headerlink" title="struct"></a>struct</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">import struct</span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">写入</span></span><br><span class="line"><span class="string">a=12.23</span></span><br><span class="line"><span class="string">b=True</span></span><br><span class="line"><span class="string">c=8</span></span><br><span class="line"><span class="string">sn=struct.pack('</span><span class="keyword">if</span>?<span class="string">',c,a,b)  ########注意：'</span><span class="keyword">if</span>?<span class="string">'：这是对应的格式，'</span>i<span class="string">'代表int型，'</span>f<span class="string">'代表浮点型，'</span>?<span class="string">'代表布尔型,顺序是可以调换的</span></span><br><span class="line"><span class="string">f=open('</span>kkk.dat<span class="string">','</span>wb<span class="string">')</span></span><br><span class="line"><span class="string">f.write(sn)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">f.close()</span></span><br><span class="line"><span class="string">读出</span></span><br><span class="line"><span class="string">f=open('</span>kkk.dat<span class="string">','</span>rb<span class="string">')</span></span><br><span class="line"><span class="string">sn=f.read(9)</span></span><br><span class="line"><span class="string">ls=struct.unpack('</span><span class="keyword">if</span>?<span class="string">',sn)</span></span><br><span class="line"><span class="string">print(ls[0])</span></span><br><span class="line"><span class="string">print(ls[1])</span></span><br><span class="line"><span class="string">f.close()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#字符串写入</span></span><br><span class="line"><span class="string">s=b'</span>hello world<span class="string">'</span></span><br><span class="line"><span class="string">sn=struct.pack('</span>10s<span class="string">',s)</span></span><br><span class="line"><span class="string">f=open('</span>myfile.dat<span class="string">','</span>wb<span class="string">')</span></span><br><span class="line"><span class="string">f.write(sn)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#字符串读出</span></span><br><span class="line"><span class="string">f=open('</span>myfile.dat<span class="string">','</span>rb<span class="string">')</span></span><br><span class="line"><span class="string">i=struct.unpack('</span>10s<span class="string">',f.read())</span></span><br><span class="line"><span class="string">print(i)</span></span><br></pre></td></tr></table></figure>
+<h3 id="pickle"><a href="#pickle" class="headerlink" title="pickle"></a>pickle</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">import pickle</span><br><span class="line">a=10</span><br><span class="line">b=10.1</span><br><span class="line">c=[[1,2,3],[4,5,6]]</span><br><span class="line">d=<span class="string">'你好'</span></span><br><span class="line"><span class="comment">#写入（逐一的写入）</span></span><br><span class="line">f=open(<span class="string">'kkk.dat'</span>,<span class="string">'wb'</span>)</span><br><span class="line">pickle.dump(a,f)</span><br><span class="line">pickle.dump(b,f)</span><br><span class="line">pickle.dump(c,f)</span><br><span class="line">pickle.dump(d,f)</span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line">读出</span><br><span class="line">f=open(<span class="string">'kkk.dat'</span>,<span class="string">'rb'</span>)</span><br><span class="line">n=pickle.load(f)</span><br><span class="line"><span class="built_in">print</span>(n)</span><br><span class="line">i=0</span><br><span class="line"><span class="keyword">while</span> i&lt;n:</span><br><span class="line">    x=pickle.load(f)</span><br><span class="line">    <span class="built_in">print</span>(x)</span><br><span class="line">    i=i+1</span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">读出（逐一读出）</span><br><span class="line">with open(<span class="string">'kkk.dat'</span>,<span class="string">'rb'</span>) as f:</span><br><span class="line">    x=pickle.load(f)</span><br><span class="line">    y=pickle.load(f)</span><br><span class="line">    z=pickle.load(f)</span><br><span class="line">    k=pickle.load(f)</span><br><span class="line">    <span class="built_in">print</span>(x,y,z,k)</span><br></pre></td></tr></table></figure>
+<h3 id="文件的定位"><a href="#文件的定位" class="headerlink" title="文件的定位"></a>文件的定位</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">格式：seek(n)    n:一个汉字是n=2,</span><br><span class="line">返回值：返回指定的位置</span><br><span class="line">说明:通过指定元素的位置，将文件指针移动到该位置</span><br><span class="line">seek()函数有三个固定值，分别为0，1，2</span><br><span class="line">0：文件的开头</span><br><span class="line">1：文件当前的位置</span><br><span class="line">2：文件的结尾位置</span><br><span class="line">seek(0,2)代表将指针定位到文件，然后进行添加操作</span><br><span class="line">seek(0,1)代表在当前指针的位置，进行替换</span><br><span class="line"></span><br><span class="line">写入</span><br><span class="line">f=open(<span class="string">'k1.txt'</span>,<span class="string">'w'</span>)</span><br><span class="line">f.writelines([<span class="string">'哈哈你是不是傻'</span>,<span class="string">'嘿嘿'</span>,<span class="string">'嘎嘎'</span>])</span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line">修改</span><br><span class="line">f=open(<span class="string">'k1.txt'</span>,<span class="string">'r+'</span>)    <span class="comment">#'r+'：替换</span></span><br><span class="line">f.seek(2)</span><br><span class="line">f.write(<span class="string">'我困'</span>)</span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line">修改</span><br><span class="line">f=open(<span class="string">'k1.txt'</span>,<span class="string">'r+'</span>)</span><br><span class="line">f.seek(10)</span><br><span class="line">f.write(<span class="string">'毁灭'</span>)</span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line">补充：对文件的读取时，如果文件大小未知，切忌不要使用<span class="built_in">read</span>(),readline(),readlines()将内容一次性读入到内存中。</span><br><span class="line">因为有可能文件内容过多，造成读取时的IO阻塞。建议，将文件分多次分批读入内存中。我们通常获取到文件大小size=path.getsize(<span class="string">'文件名'</span>)</span><br><span class="line">根据其大小来判断我们采用何种方式进行读取数据内容</span><br><span class="line"></span><br><span class="line">from os import path</span><br><span class="line">f=open(<span class="string">'k1.txt'</span>,<span class="string">'r'</span>)</span><br><span class="line">size=path.getsize(<span class="string">'k1.txt'</span>)</span><br><span class="line"><span class="built_in">print</span>(size)</span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">    content=f.read(1024)</span><br><span class="line">    <span class="keyword">if</span> content==<span class="string">''</span>:</span><br><span class="line">        <span class="built_in">break</span></span><br><span class="line">    <span class="built_in">print</span>(content)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/13/lesson6/" class="archive-article-date">
-  	<time datetime="2018-07-13T06:26:56.077Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/13/lesson6/">组合数据类型</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/30/lesson15/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/13/lesson5/" class="archive-article-date">
-  	<time datetime="2018-07-13T03:55:44.814Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-13</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/27/lesson14/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">文件的输入输出</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/13/lesson5/">循环控制语句</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/13/lesson4/" class="archive-article-date">
-  	<time datetime="2018-07-13T02:37:44.116Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/13/lesson4/">IF</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/12/lesson3/" class="archive-article-date">
-  	<time datetime="2018-07-12T13:29:52.670Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/12/lesson3/">Python数据类型</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/12/lesson2/" class="archive-article-date">
-  	<time datetime="2018-07-12T05:59:19.666Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/12/lesson2/">Python基础</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/12/lesson1/" class="archive-article-date">
-  	<time datetime="2018-07-12T05:08:26.822Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/12/lesson1/">Python入门</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/12/hello-world/" class="archive-article-date">
-  	<time datetime="2018-07-12T01:04:26.868Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/12/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -396,8 +342,8 @@ span id="busuanzi_container_page_pv">
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
