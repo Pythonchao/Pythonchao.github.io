@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | sxchao-blog</title>
+  <title>解析xml文件 | sxchao-blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="Python、爬虫、Web开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sxchao-blog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="DOM方式解析xml文件例子1234567891011121314151617181920212223from xml.dom import minidom    #引入mindom，以dom方式解析xml文件dom=minidom.parse(&apos;lesson16-xml.xml&apos;)     #打开xml文件root=dom.documentElement  #得到文档的元素对象print(roo">
+<meta name="keywords" content="Python、爬虫、Web开发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="解析xml文件">
+<meta property="og:url" content="http://yoursite.com/2018/08/01/lesson16/index.html">
 <meta property="og:site_name" content="sxchao-blog">
+<meta property="og:description" content="DOM方式解析xml文件例子1234567891011121314151617181920212223from xml.dom import minidom    #引入mindom，以dom方式解析xml文件dom=minidom.parse(&apos;lesson16-xml.xml&apos;)     #打开xml文件root=dom.documentElement  #得到文档的元素对象print(roo">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-01T11:34:15.863Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sxchao-blog">
+<meta name="twitter:title" content="解析xml文件">
+<meta name="twitter:description" content="DOM方式解析xml文件例子1234567891011121314151617181920212223from xml.dom import minidom    #引入mindom，以dom方式解析xml文件dom=minidom.parse(&apos;lesson16-xml.xml&apos;)     #打开xml文件root=dom.documentElement  #得到文档的元素对象print(roo">
   
     <link rel="alternative" href="/atom.xml" title="sxchao-blog" type="application/atom+xml">
   
@@ -161,295 +165,159 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-lesson16" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      解析xml文件
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/01/lesson16/" class="archive-article-date">
+
+        
+        <a href="/2018/08/01/lesson16/" class="archive-article-date">
   	<time datetime="2018-08-01T11:20:55.596Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-01</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/01/lesson16/">解析xml文件</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="DOM方式解析xml文件"><a href="#DOM方式解析xml文件" class="headerlink" title="DOM方式解析xml文件"></a>DOM方式解析xml文件</h2><h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">from xml.dom import minidom    <span class="comment">#引入mindom，以dom方式解析xml文件</span></span><br><span class="line">dom=minidom.parse(<span class="string">'lesson16-xml.xml'</span>)     <span class="comment">#打开xml文件</span></span><br><span class="line">root=dom.documentElement  <span class="comment">#得到文档的元素对象</span></span><br><span class="line"><span class="built_in">print</span>(root.nodeName)      <span class="comment">#获得节点名字，即标签名</span></span><br><span class="line"><span class="built_in">print</span>(root.nodeValue)     <span class="comment">#获得节点数</span></span><br><span class="line"><span class="built_in">print</span>(root.nodeType)      <span class="comment">#获得节点类型</span></span><br><span class="line"></span><br><span class="line">node=root.getElementsByTagName(<span class="string">'car'</span>)  <span class="comment">#获得在根节点下，所有名字是car的节点对象</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(node[0].childNodes)):    <span class="comment">#将标签输出</span></span><br><span class="line">    <span class="keyword">if</span> node[0].childNodes[i].nodeType==1:</span><br><span class="line">        <span class="built_in">print</span>(node[0].childNodes[i].nodeName,end=<span class="string">' '</span>)</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(node)):</span><br><span class="line">    <span class="comment">#print(node[i])</span></span><br><span class="line">    <span class="built_in">print</span>(root.getElementsByTagName(<span class="string">'brand'</span>)[i].firstChild.data,end=<span class="string">' '</span>)     <span class="comment">#firstChild.data取得标签中的文本内容</span></span><br><span class="line">    <span class="built_in">print</span>(root.getElementsByTagName(<span class="string">'company'</span>)[i].firstChild.data,end=<span class="string">' '</span>)</span><br><span class="line">    <span class="built_in">print</span>(root.getElementsByTagName(<span class="string">'price'</span>)[i].firstChild.data,end=<span class="string">' '</span>)</span><br><span class="line">    <span class="built_in">print</span>(root.getElementsByTagName(<span class="string">'color'</span>)[i].firstChild.data,end=<span class="string">' '</span>)</span><br><span class="line">    <span class="built_in">print</span>(root.getElementsByTagName(<span class="string">'model'</span>)[i].firstChild.data,end=<span class="string">' '</span>)</span><br><span class="line">    <span class="built_in">print</span>(root.getElementsByTagName(<span class="string">'country'</span>)[i].firstChild.data,end=<span class="string">' '</span>)</span><br><span class="line">    <span class="built_in">print</span>()</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">from xml.etree import ElementTree   <span class="comment">#引入ElementTree</span></span><br><span class="line"></span><br><span class="line">tree=ElementTree.parse(<span class="string">'lesson16-xml.xml'</span>)</span><br><span class="line">root=tree.getroot()   <span class="comment">#获取到根节点</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#双重for循环实现</span></span><br><span class="line"><span class="keyword">for</span> child <span class="keyword">in</span> root:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'遍历root'</span>,child.tag,<span class="string">'-------&gt;'</span>,child.attrib)</span><br><span class="line">    <span class="keyword">for</span> node <span class="keyword">in</span> child:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'遍历node'</span>,node.tag,<span class="string">'-------&gt;'</span>,node.text) </span><br><span class="line"></span><br><span class="line"><span class="comment">#运用递归实现</span></span><br><span class="line">def parseXML(element):</span><br><span class="line">    <span class="keyword">if</span> len(element)&gt;0:</span><br><span class="line">        <span class="keyword">for</span> child <span class="keyword">in</span> element:</span><br><span class="line">            <span class="keyword">if</span> child.tag != <span class="string">'car'</span>:</span><br><span class="line">                <span class="built_in">print</span>(child.tag,<span class="string">'----&gt;'</span>,child.text,end=<span class="string">' '</span>)</span><br><span class="line">            <span class="built_in">print</span>()</span><br><span class="line">            parseXML(child)</span><br><span class="line">parseXML(root)</span><br></pre></td></tr></table></figure>
+<h2 id="SAX解析xml文件"><a href="#SAX解析xml文件" class="headerlink" title="SAX解析xml文件"></a>SAX解析xml文件</h2><h3 id="SAX解析文件步骤"><a href="#SAX解析文件步骤" class="headerlink" title="SAX解析文件步骤"></a>SAX解析文件步骤</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#读取xml文档</span></span><br><span class="line">xml.sax.parse(xmlfile)</span><br><span class="line"></span><br><span class="line">from xml import sax</span><br><span class="line">from xml.sax import ContentHandler</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建一个解析器</span></span><br><span class="line">parser=sax.make_parser()</span><br><span class="line"></span><br><span class="line"><span class="comment">#解析指定的xml文档</span></span><br><span class="line">parser.parse(<span class="string">'lesson16-xml.xml'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#给解析器指定一个handler</span></span><br><span class="line">parser.setContentHandler(sax.ContentHandler)</span><br></pre></td></tr></table></figure>
+<h3 id="作业1"><a href="#作业1" class="headerlink" title="作业1"></a>作业1</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">from xml.dom import minidom  <span class="comment"># 引入minidom，以dom方式解析xml文件</span></span><br><span class="line">from xml.etree import ElementTree</span><br><span class="line">import xlwt</span><br><span class="line">def readXML(xmlfile):</span><br><span class="line">    dic = &#123;&#125;</span><br><span class="line">    title = []</span><br><span class="line">    <span class="comment"># 载入xml文档进行解析，生成一个document对象</span></span><br><span class="line">    document = minidom.parse(xmlfile)</span><br><span class="line">    <span class="comment"># 获得文档元素对象,此处获得了根节点</span></span><br><span class="line">    root = document.documentElement</span><br><span class="line">    <span class="comment"># 根据根节点，向下查找内部所有的car节点，并将节点名字返回</span></span><br><span class="line">    sheet_name = root.getElementsByTagName(<span class="string">'car'</span>)[0].nodeName</span><br><span class="line">    <span class="comment"># 通过getElementsByTagName()函数，获得指定的节点对象，不管节点对象有几个，都是返回一个列表类型</span></span><br><span class="line">    node = root.getElementsByTagName(<span class="string">'car'</span>)</span><br><span class="line">    cars = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(node)):</span><br><span class="line">        item = []</span><br><span class="line">        item.append(node[i].getElementsByTagName(<span class="string">'brand'</span>)[0].firstChild.data)</span><br><span class="line">        item.append(node[i].getElementsByTagName(<span class="string">'country'</span>)[0].firstChild.data)</span><br><span class="line">        item.append(node[i].getElementsByTagName(<span class="string">'model'</span>)[0].firstChild.data)</span><br><span class="line">        item.append(node[i].getElementsByTagName(<span class="string">'price'</span>)[0].firstChild.data)</span><br><span class="line">        item.append(node[i].getElementsByTagName(<span class="string">'company'</span>)[0].firstChild.data)</span><br><span class="line">        item.append(node[i].getElementsByTagName(<span class="string">'color'</span>)[0].firstChild.data)</span><br><span class="line">        cars.append(item)</span><br><span class="line">    dic[sheet_name] = cars</span><br><span class="line">    dic[<span class="string">'title'</span>] = [<span class="string">'brand'</span>,<span class="string">'country'</span>,<span class="string">'model'</span>,<span class="string">'price'</span>,<span class="string">'company'</span>,<span class="string">'color'</span>]</span><br><span class="line">    <span class="built_in">return</span> dic</span><br><span class="line"></span><br><span class="line">def readXML2(element):</span><br><span class="line">    l3=[]</span><br><span class="line">    dic1=&#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> child <span class="keyword">in</span> root:</span><br><span class="line">        l1=[]</span><br><span class="line">        l2=[]</span><br><span class="line">        <span class="keyword">for</span> node <span class="keyword">in</span> child:</span><br><span class="line">            l1.append(node.tag)</span><br><span class="line">            l2.append(node.text)</span><br><span class="line">        l3.append(l2) </span><br><span class="line">    dic1[<span class="string">'title'</span>]=l1</span><br><span class="line">    dic1[<span class="string">'car'</span>]=l3</span><br><span class="line">    <span class="built_in">return</span> dic1</span><br><span class="line"></span><br><span class="line">def saveXML(dic1):</span><br><span class="line">    <span class="comment"># 生成一个Excel文件对象</span></span><br><span class="line">    book = xlwt.Workbook()</span><br><span class="line">    sheet = book.add_sheet(<span class="string">'car'</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(dic1[<span class="string">'title'</span>])):</span><br><span class="line">        sheet.write(0, i, dic1[<span class="string">'title'</span>][i])</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> m <span class="keyword">in</span> range(len(dic1[<span class="string">'car'</span>])):</span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> range(len(dic1[<span class="string">'car'</span>][m])):</span><br><span class="line">            sheet.write(m+1, n, dic1[<span class="string">'car'</span>][m][n])</span><br><span class="line">    book.save(<span class="string">'car.xls'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    tree=ElementTree.parse(<span class="string">'lesson16-xml.xml'</span>)</span><br><span class="line">    root=tree.getroot()</span><br><span class="line">    dic1=readXML2(root)</span><br><span class="line">    <span class="comment">#dic = readXML('lesson16-xml.xml')</span></span><br><span class="line">    saveXML(dic1)</span><br></pre></td></tr></table></figure>
+<h3 id="作业2"><a href="#作业2" class="headerlink" title="作业2"></a>作业2</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">from xml.dom import minidom  <span class="comment"># 引入minidom，以dom方式解析xml文件</span></span><br><span class="line">from xml.etree import ElementTree</span><br><span class="line">import xlwt</span><br><span class="line"></span><br><span class="line">def readXML1(xmlFile):</span><br><span class="line">    dic=&#123;&#125;</span><br><span class="line">    det=[]</span><br><span class="line">    tree=ElementTree.parse(xmlFile)</span><br><span class="line">    root=tree.getroot()</span><br><span class="line"></span><br><span class="line">    <span class="comment">#print(root.tag)</span></span><br><span class="line">    <span class="keyword">for</span> child <span class="keyword">in</span> root:</span><br><span class="line">        </span><br><span class="line">       <span class="comment">#print(child.tag,child.text)</span></span><br><span class="line">        <span class="keyword">if</span> child.tag==<span class="string">'DTIME'</span>:</span><br><span class="line">            time=child.text</span><br><span class="line"></span><br><span class="line">            <span class="comment">#print(time)</span></span><br><span class="line">        <span class="keyword">elif</span> child.tag==<span class="string">'CUSTOMERADDR'</span>:</span><br><span class="line">            cus=[]   <span class="comment">#客户信息列表</span></span><br><span class="line">            <span class="keyword">for</span> node <span class="keyword">in</span> child:</span><br><span class="line">                <span class="comment">#print(node.tag,node.text)</span></span><br><span class="line">                cus.append(node.text)</span><br><span class="line">            dic[<span class="string">'CUSTOMERADDR'</span>]=cus</span><br><span class="line">        <span class="keyword">elif</span> child.tag==<span class="string">'MERCHANTADDR'</span>:</span><br><span class="line">            mer=[]<span class="comment">#商家信息列表</span></span><br><span class="line">            <span class="keyword">for</span> node <span class="keyword">in</span> child:</span><br><span class="line">                mer.append(node.text)</span><br><span class="line">            dic[<span class="string">'MERCHANTADDR'</span>]=mer</span><br><span class="line">        <span class="keyword">elif</span> child.tag==<span class="string">'INSTRUCTION'</span>:</span><br><span class="line">            instr=child.text</span><br><span class="line">        <span class="keyword">elif</span> child.tag==<span class="string">'DETAIL'</span>:</span><br><span class="line">            det1=[]<span class="comment">#商品信息</span></span><br><span class="line">            <span class="keyword">for</span> node <span class="keyword">in</span> child:</span><br><span class="line">                </span><br><span class="line">                det1.append(node.text)</span><br><span class="line">            det.append(det1)</span><br><span class="line">    dic[time]=det</span><br><span class="line">    <span class="comment">#print(det)</span></span><br><span class="line">    <span class="comment">#print(dic)</span></span><br><span class="line">    <span class="built_in">return</span> dic</span><br><span class="line"></span><br><span class="line">def saveExecl(dic):</span><br><span class="line">    l=list(dic.keys())</span><br><span class="line">    </span><br><span class="line">    wb=xlwt.Workbook()</span><br><span class="line">    sheet1=wb.add_sheet(<span class="string">'客户信息表'</span>)</span><br><span class="line">    sheet2=wb.add_sheet(<span class="string">'商家信息表'</span>)</span><br><span class="line">    sheet3=wb.add_sheet(l[2])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(dic[<span class="string">'title1'</span>])):</span><br><span class="line">        sheet1.write(0,i,dic[<span class="string">'title1'</span>][i])</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(len(dic[<span class="string">'CUSTOMERADDR'</span>])):</span><br><span class="line">        sheet1.write(1,j,dic[<span class="string">'CUSTOMERADDR'</span>][j])</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(dic[<span class="string">'title1'</span>])):</span><br><span class="line">        sheet2.write(0,i,dic[<span class="string">'title1'</span>][i])</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(len(dic[<span class="string">'MERCHANTADDR'</span>])):</span><br><span class="line">        sheet2.write(1,j,dic[<span class="string">'MERCHANTADDR'</span>][j])</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(dic[<span class="string">'title2'</span>])):</span><br><span class="line">        sheet3.write(0,i,dic[<span class="string">'title2'</span>][i])</span><br><span class="line">    <span class="keyword">for</span> m <span class="keyword">in</span> range(len(dic[l[2]])):</span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> range(len(dic[l[2]][m])):</span><br><span class="line">            sheet3.write(m+1,n,dic[l[2]][m][n])</span><br><span class="line">    wb.save(<span class="string">'asd.xls'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    dic=readXML1(<span class="string">'order.xml'</span>)</span><br><span class="line">    dic[<span class="string">'title1'</span>]=[<span class="string">'country'</span>,<span class="string">'name'</span>,<span class="string">'street'</span>,<span class="string">'city'</span>,<span class="string">'province'</span>,<span class="string">'zip'</span>]</span><br><span class="line">    dic[<span class="string">'title2'</span>]=[<span class="string">'no'</span>, <span class="string">'name'</span>, <span class="string">'count'</span>, <span class="string">'price'</span>, <span class="string">'urgent'</span>, <span class="string">'extra'</span>]</span><br><span class="line">    saveExecl(dic)</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">from xml.etree import ElementTree as et</span><br><span class="line">import xlwt</span><br><span class="line">def readXML(xmlfile):</span><br><span class="line">    tree = et.parse(xmlfile)</span><br><span class="line">    root = tree.getroot()</span><br><span class="line">    order_time = <span class="string">''</span></span><br><span class="line">    order_add = &#123;&#125;</span><br><span class="line">    order_list = []</span><br><span class="line">    <span class="keyword">if</span> len(root) &gt; 0:</span><br><span class="line">        <span class="keyword">for</span> child <span class="keyword">in</span> root: <span class="comment"># 将一级子节点内容取出</span></span><br><span class="line">            <span class="keyword">if</span> child.tag == <span class="string">'DTIME'</span>:</span><br><span class="line">                order_time = (child.text).strip()</span><br><span class="line">            <span class="keyword">elif</span> child.tag ==<span class="string">'CUSTOMERADDR'</span>: </span><br><span class="line">                customer = []</span><br><span class="line">                <span class="keyword">for</span> node <span class="keyword">in</span> child:</span><br><span class="line">                    customer.append((node.tag,(node.text).strip()))</span><br><span class="line">                    order_add[<span class="string">'CUSTOMERADDR'</span>] = customer</span><br><span class="line">            <span class="keyword">elif</span> child.tag == <span class="string">'MERCHANTADDR'</span>:</span><br><span class="line">                mercharnt = []</span><br><span class="line">                <span class="keyword">for</span> node <span class="keyword">in</span> child:</span><br><span class="line">                    mercharnt.append((node.tag,(node.text).strip()))</span><br><span class="line">                    order_add[<span class="string">'MERCHANTADDR'</span>] = mercharnt</span><br><span class="line">            <span class="keyword">elif</span> child.tag == <span class="string">'DETAIL'</span>:</span><br><span class="line">                detail = []</span><br><span class="line">                <span class="keyword">for</span> node <span class="keyword">in</span> child:</span><br><span class="line">                    content = <span class="string">''</span></span><br><span class="line">                    <span class="keyword">if</span> node.text != None:</span><br><span class="line">                        content = node.text.strip()</span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                        content = <span class="string">''</span></span><br><span class="line">                    detail.append((node.tag, content))</span><br><span class="line">                order_list.append(detail)</span><br><span class="line">                order_add[order_time] = order_list</span><br><span class="line">    <span class="built_in">return</span> order_add</span><br><span class="line">           </span><br><span class="line">def saveExcel(dic):</span><br><span class="line">    items = list(dic.keys())</span><br><span class="line">    </span><br><span class="line">    book = xlwt.Workbook()</span><br><span class="line">    customer_sheet = book.add_sheet(items[0])</span><br><span class="line">    mercharnt_sheet = book.add_sheet(items[1])</span><br><span class="line">    detail_sheet = book.add_sheet(items[2])</span><br><span class="line">    </span><br><span class="line">    customer_list = dic[items[0]]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(customer_list)):</span><br><span class="line">        customer_sheet.write(0,i,customer_list[i][0])</span><br><span class="line">        customer_sheet.write(1,i,customer_list[i][1])</span><br><span class="line"></span><br><span class="line">    mercharnt_list = dic[items[1]]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(mercharnt_list)):</span><br><span class="line">        mercharnt_sheet.write(0,i,mercharnt_list[i][0])</span><br><span class="line">        mercharnt_sheet.write(1,i,mercharnt_list[i][1])</span><br><span class="line"></span><br><span class="line">    detail_list = dic[items[2]]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(detail_list)):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(len(detail_list[i])):</span><br><span class="line">            <span class="keyword">if</span> i == 0:</span><br><span class="line">                detail_sheet.write(0, j, detail_list[i][j][0])</span><br><span class="line">            detail_sheet.write(i+1, j, detail_list[i][j][1])</span><br><span class="line">    book.save(<span class="string">'order.xls'</span>)</span><br><span class="line">       </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    dic = readXML(<span class="string">'order.xml'</span>)</span><br><span class="line">    saveExcel(dic)</span><br></pre></td></tr></table></figure>
+      
 
-        <div class="article-info info-on-right">
-          
-          
-
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/01/lesson16/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/30/lesson15/" class="archive-article-date">
-  	<time datetime="2018-07-30T13:50:52.011Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/30/lesson15/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">二进制的输入输出</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/30/lesson15/">二进制的输入输出</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/27/lesson14/" class="archive-article-date">
-  	<time datetime="2018-07-27T14:03:28.868Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/27/lesson14/">文件的输入输出</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/27/lesson10/" class="archive-article-date">
-  	<time datetime="2018-07-27T13:53:16.637Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/27/lesson10/">拷贝copy()</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/26/lesson13/" class="archive-article-date">
-  	<time datetime="2018-07-26T11:59:29.403Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/26/lesson13/">高阶函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/26/lesson12/" class="archive-article-date">
-  	<time datetime="2018-07-26T02:36:55.895Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/26/lesson12/">局部变量和全局变量</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/lesson11/" class="archive-article-date">
-  	<time datetime="2018-07-23T01:42:33.544Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/lesson11/">函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/19/tigao1/" class="archive-article-date">
-  	<time datetime="2018-07-19T02:33:08.900Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/19/tigao1/">高级特性</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/18/lesson9/" class="archive-article-date">
-  	<time datetime="2018-07-18T02:01:02.121Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/18/lesson9/">集合</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/17/lesson8/" class="archive-article-date">
-  	<time datetime="2018-07-17T03:09:20.839Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/17/lesson8/">字典</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -477,8 +345,8 @@ span id="busuanzi_container_page_pv">
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
