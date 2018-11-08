@@ -152,6 +152,78 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-lesson2" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/08/lesson2/">进制转换、浮点数、decimal函数  （代码）</a>
+    </h1>
+  
+
+        
+        <a href="/2018/11/08/lesson2/" class="archive-article-date">
+  	<time datetime="2018-11-08T09:17:47.269Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>‘’’<br>print(‘5%2’)</p>
+<p>i=1+2\<br>    +3+4+\<br>    5<br>print(i)  #一行写不完可以多行书写,只需要加一个’\’</p>
+<p>i = ‘z’+’h’+\<br>    ‘a’+’n’+\<br>        ‘g’<br>print(i)<br>‘’’</p>
+<p>‘’’<br>i=10<br>print(oct(i)) #十进制转八进制<br>print(hex(i)) #十进制转十六进制<br>print(bin(i)) #十进制转二进制<br>print(int(0o12)) #括号内的其他进制转换为十进制<br>print(‘八进制：%o,十进制：%x’ %(10,10)) #八进制和十六进制占位符<br>‘’’</p>
+<p>‘’’<br>a=5<br>print(a/2) #在python默认的是浮点型<br>print(a%2) #求余数<br>print(divmod(5,3))  #求商和余数<br>print(a//2) #求整数（小数位全部舍去只留整数，不进行四舍五入）<br>import math #使用floor和ceil时首先引入 math 包<br>print(math.floor(a/2)) #就低原则 只舍不入<br>print(int(a/2))  #和//类似  只留整数<br>print(math.ceil(a/2))  #就高原则 只入不舍<br>print(round(1.5))  #四舍五入（浮点型是近似值，.5不一定入）<br>print(round(1.5,1)) #保留小数点后一位<br>print(a<strong>2) #求幂次方，相当于5的2次幂<br>print(pow(5,2)) #等同于print(a</strong>2)<br>print(abs(-10)) #求绝对值<br>‘’’</p>
+<p>‘’’<br>a=True<br>b=False<br>print(a+b)<br>print(a+1,a-1,a*1,a/1)</p>
+<p>#True和False可以当做1和0进行算数运算<br>print(not a)<br>print(not b)</p>
+<p>#求反  ‘非’<br>‘’’</p>
+<p>‘’’<br>from decimal import Decimal<br>i=12.45567<br>j=34.55555<br>a=Decimal(i).quantize(Decimal(‘0.00’))<br>b=Decimal(j).quantize(Decimal(‘0.00’))<br>print(a)<br>print(b)<br>print(a+b)<br>print(a*b)</p>
+<p>#运用Decimal精确浮点型小数，可以进行精准的四舍五入计算<br>‘’’</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/11/08/lesson2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
